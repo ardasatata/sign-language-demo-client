@@ -11,7 +11,7 @@ export class Api {
     setup() {
         this.apisauce = create({
             baseURL: 'http://140.115.51.225:5000/',
-            timeout: 60000
+            timeout: 100000
         })
     }
 
