@@ -70,6 +70,8 @@ function App() {
                           <div  className="flex flex-col justify-center items-center h-screen">
                               <div className="flex flex-col w-full h-full bg-black items-center justify-center">
                                   <VideoRecorder
+                                      isReplayingVideo={false}
+                                      showReplayControls={true}
                                       isOnInitially={true}
                                       countdownTime={3000}
                                       timeLimit={8000}
