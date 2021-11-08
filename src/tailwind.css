@@ -1,6 +1,6 @@
 @tailwind base;
-
 @tailwind components;
+@tailwind utilities;
 
 .react-date-picker__wrapper {
   border: none !important;
@@ -32,5 +32,3 @@
     transform: rotate(360deg);
   }
 }
-
-@tailwind utilities;

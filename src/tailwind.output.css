@@ -614,53 +614,6 @@ video {
   }
 }
 
-.react-date-picker__wrapper {
-  border: none !important;
-}
-
-.lds-dual-ring {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-}
-
-.lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border-radius: 50%;
-  border: 6px solid #ccc;
-  border-color: #ccc transparent #ccc transparent;
-  -webkit-animation: lds-dual-ring 1.2s linear infinite;
-          animation: lds-dual-ring 1.2s linear infinite;
-}
-
-@-webkit-keyframes lds-dual-ring {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes lds-dual-ring {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0 !important;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse))) !important;
@@ -22247,6 +22200,53 @@ video {
 .animate-bounce {
   -webkit-animation: bounce 1s infinite !important;
           animation: bounce 1s infinite !important;
+}
+
+.react-date-picker__wrapper {
+  border: none !important;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #ccc;
+  border-color: #ccc transparent #ccc transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @media (min-width: 640px) {

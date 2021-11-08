@@ -28,4 +28,17 @@ export class Api {
         return response.data;
     }
 
+    async sendVideo(video) {
+        console.log(video)
+
+        const headers = {
+            'Content-Type': 'multipart/form-data'
+        }
+
+        const formData = new FormData();
+        formData.append('video', video)
+        const response = await this.apisauce.post('/send-video', formData, { headers })
+        return response.data;
+    }
+
 }
