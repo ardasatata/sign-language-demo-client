@@ -41,4 +41,18 @@ export class Api {
         return response.data;
     }
 
+    async uploadVideo(video, label, subject) {
+        const headers = {
+            'Content-Type': 'multipart/form-data'
+        }
+
+        const formData = new FormData();
+        formData.append('video', video)
+        formData.append('label', label)
+        formData.append('subject', subject)
+
+        const response = await this.apisauce.post('/upload-video', formData, { headers })
+        return response.data;
+    }
+
 }

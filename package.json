@@ -3,30 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.4.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "apisauce": "^2.1.2",
     "history": "5",
+    "postcss-cli": "^9.0.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-loading-overlay": "^1.0.1",
     "react-router": "^6.0.0",
     "react-router-dom": "6",
-    "react-scripts": "^3.4.3",
+    "react-scripts": "^4.0.3",
+    "react-select": "^5.2.1",
     "react-spinners": "^0.11.0",
     "react-video-recorder": "^3.19.1",
-    "styled-components": "^5.3.3",
-    "tailwindcss": "^1.9.6"
+    "styled-components": "^5.3.3"
   },
   "scripts": {
-    "build:tailwind": "tailwindcss build src/tailwind.css -o src/tailwind.output.css",
-    "prestart": "npm run build:tailwind",
-    "prebuild": "npm run build:tailwind",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,5 +42,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "autoprefixer": "^9",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
