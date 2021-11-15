@@ -8,18 +8,12 @@ import VideoRecorder from 'react-video-recorder'
 import Sidebar from "./Sidebar";
 
 import Select from 'react-select';
+import {optionsLabel, optionsSubject} from "./const";
 
-const optionsLabel = [
-    { value: '01', label: '他的同学是警察 - 01' },
-    { value: '02', label: '他妈妈的同学是公务员 - 02' },
-    { value: '03', label: '我的爸爸是商人 - 03' },
-];
-
-const optionsSubject = [
-    { value: '01', label: '01' },
-    { value: '02', label: '02' },
-    { value: '03', label: '03' },
-];
+const RECORDER_TIME_CONFIG = {
+    countdownTime : 3000,
+    timeLimit: 8000
+}
 
 function Collection() {
     const api = new Api()
@@ -51,13 +45,13 @@ function Collection() {
             )
         }
         return(
-            <div style={{aspectRatio: '4/3', minHeight: '36em'}} className="p-2 bg-gray-800 rounded-md">
+            <div style={{aspectRatio: '4/3', minHeight: '40em'}} className="p-2 bg-gray-800 rounded-md">
                 <VideoRecorder
                     isReplayingVideo={false}
                     showReplayControls={true}
                     isOnInitially={true}
-                    countdownTime={1000}
-                    timeLimit={1000}
+                    countdownTime={RECORDER_TIME_CONFIG.countdownTime}
+                    timeLimit={RECORDER_TIME_CONFIG.timeLimit}
                     onRecordingComplete={async (videoBlob) => {
                         // Do something with the video...
                         setPrediction(['Uploading your video'])
@@ -75,6 +69,10 @@ function Collection() {
                 />
             </div>
         )
+    }
+
+    const reset = async () => {
+        window.location.reload(false);
     }
 
   return (
@@ -109,9 +107,14 @@ function Collection() {
                                       options={optionsSubject}
                                   />
                               </div>
-                              {/*<div className="flex justify-end mt-4">*/}
-                              {/*    <a href="#" className="text-xl font-medium text-indigo-500">John Doe</a>*/}
-                              {/*</div>*/}
+                              <div className="flex items-center justify-between mt-8">
+                                  <button
+                                      onClick={reset}
+                                      className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                      type="button">
+                                      Record New Video
+                                  </button>
+                              </div>
                           </div>
                       </div>
                       {/*<div style={{position: 'absolute', bottom: 0, color: 'white', backgroundColor: 'black', padding: '1rem', marginBottom: '1rem'}} className="text-center text-3xl font-bold font-sans">*/}

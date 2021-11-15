@@ -55,4 +55,17 @@ export class Api {
         return response.data;
     }
 
+    async fixLabel(label, filename) {
+        const headers = {
+            'Content-Type': 'multipart/form-data'
+        }
+
+        const formData = new FormData();
+        formData.append('fixedLabel', label)
+        formData.append('fileName', filename)
+
+        const response = await this.apisauce.post('/fix-label', formData, { headers })
+        return response.data;
+    }
+
 }
